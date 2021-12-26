@@ -9,7 +9,7 @@ https://nebula.kuaishou.com/rest/n/nebula/activity/earn/overview/basicInfo  对�
 1-59/15 9-23/3 * * *  ks_js.js, tag=快手极速版, enabled=true
 */
 
-const $ = new Env("快手极速版");
+new Env("快手极速版");
 
 var _0xodF = "jsjiami.com.v6",
     _0xodF_ = ["‮_0xodF"],
