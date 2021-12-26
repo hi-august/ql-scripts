@@ -7,6 +7,8 @@
  多账号请用@分割Cookie  格式:ck1@ck2@ck2 青龙变量aqcCookies qx和v2p不可用
  批量查询任务暂时无法完成 
  感谢Wenmoux的爱妻查任务脚本 Wenmoux github地址:https://github.com/Wenmoux/checkbox 作者仅完善和修改
+[task_local]
+1-59/35 9 * * *  aiqicha.js, tag=爱企查, enabled=true
 */
 const $ = new Env("爱企查日常任务");
 const axios = require("axios");

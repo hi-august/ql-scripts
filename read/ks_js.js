@@ -5,6 +5,8 @@ export kshd ="账号1ck@账号2ck"
 环境变量填写  名称 kshd    值    账号1ck@账号2ck
 邀请自己的小号和别人 一定要在第一天和往后的几天都要打开刷几个视频 不然奖励会发放失败损失很大！！
 https://nebula.kuaishou.com/rest/n/nebula/activity/earn/overview/basicInfo  对应目标   https://raw.githubusercontent.com/liuqi6968/-/main/ks_js.js
+[task_local]
+1-59/15 9-23/3 * * *  ks_js.js, tag=快手极速版, enabled=true
 */
 
 const $ = new Env("快手极速版");
