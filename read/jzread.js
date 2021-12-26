@@ -1,14 +1,9 @@
 /*
-微信公众号柠檬玩机交流
-下载地址：
-APP商店 九章头条
-
 使用方法
 获取数据打开APP即可获取
 一天预算2块的样子 
 邀请的别邀请多了容易封号
 ========青龙===========
-ql raw http://nm66.top/jzread.js
 变量为jzreadurl多账号用@隔开
 export jzreadurl='https://api.st615.com/v1/user/info?token=抓包的token'
 自行抓包替换 关键字为token 抓包的token

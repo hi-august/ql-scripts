@@ -1,14 +1,10 @@
 /*
-邀请码必填得金币  我的邀请码 24516823
-
 hostname = *.xiaodouzhuan.cn
 ##点任务获取数据##
 ===========ql===========
 变量
 export jkdhd='{"openid": "替换的CK"}' 
-
 export jkdck='{"Cookie":"xz_jkd_appkey=替换的CK"}'
-
 多账号用@隔开
 */
 

@@ -1,28 +1,13 @@
 /*
-
-邀请码  : 982791098
-感谢大家的填写
-
 12.15更新
  增加青龙环境通知
-
-
-
-  
 export kshd ="账号1ck@账号2ck"
 环境变量填写  名称 kshd    值    账号1ck@账号2ck
-
-
 邀请自己的小号和别人 一定要在第一天和往后的几天都要打开刷几个视频 不然奖励会发放失败损失很大！！
-
 https://nebula.kuaishou.com/rest/n/nebula/activity/earn/overview/basicInfo  对应目标   https://raw.githubusercontent.com/liuqi6968/-/main/ks_js.js
-
-
-
-
-
-
 */
+
+const $ = new Env("快手极速版");
 
 var _0xodF = "jsjiami.com.v6",
     _0xodF_ = ["‮_0xodF"],
