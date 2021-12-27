@@ -13,7 +13,7 @@ IOS/安卓: 今日头条极速版
 
 V2P重写：
 [task_local]
-1-59/15 9-23/3 * * *  jrttjsb.js, tag=今日头条极速版, enabled=true
+1-59/45 9-23/3 * * *  jrttjsb.js, tag=今日头条极速版, enabled=true
 [rewrite_local]
 luckycat\/lite\/v1\/task\/page_data url script-request-header https://raw.githubusercontent.com/leafxcy/JavaScript/main/jrttjsb.js
 [MITM]
@@ -36,6 +36,7 @@ let httpResult; //global buffer
 
 let host = "i.snssdk.com";
 let hostname = "https://" + host;
+const notify = $.isNode() ? require("./sendNotify") : "";
 
 let userAgent =
     ($.isNode() ? process.env.jrttjsbUA : $.getdata("jrttjsbUA")) ||
@@ -386,10 +387,12 @@ async function QueryUserInfo(doTask) {
         }
         if (doTask == 0) {
             console.log(`\n账户信息：`);
-            console.log(`金币：${result.data.user_income.score_balance}`);
+            var coin_msg = '金币: {result.data.user_income.score_balance}';
+            console.log(coin_msg);
             console.log(
                 `现金：${result.data.user_income.cash_balance / 100}元`
             );
+            await notify.sendNotify($.name, coin_msg);
         } else {
             if (
                 result.data.treasure.next_treasure_time ==

@@ -19,7 +19,7 @@ hostname = api.st615.com
 */
 
 // [task_local]
-// 1-59/15 9-23/3 * * *  jzread.js, tag=柠檬九章头条, enabled=true
+// 1-59/45 9-23/3 * * *  jzread.js, tag=柠檬九章头条, enabled=true
 
 const $ = new Env("柠檬九章头条");
 let status;

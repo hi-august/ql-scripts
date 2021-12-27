@@ -7,7 +7,7 @@ export jkdhd='{"openid": "替换的CK"}'
 export jkdck='{"Cookie":"xz_jkd_appkey=替换的CK"}'
 多账号用@隔开
 [task_local]
-1-59/15 9-23/3 * * *  wx_jkd.js, tag=聚看点, enabled=true
+1-59/45 9-23/3 * * *  wx_jkd.js, tag=聚看点, enabled=true
 */
 
 const $ = new Env("聚看点");
