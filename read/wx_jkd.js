@@ -9,9 +9,10 @@ export jkdck='{"Cookie":"xz_jkd_appkey=替换的CK"}'
 [task_local]
 1-59/45 9-23/3 * * *  wx_jkd.js, tag=聚看点, enabled=true
 */
-const notify = $.isNode() ? require("./sendNotify") : "";
 
 const $ = new Env("聚看点");
+const notify = $.isNode() ? require("./sendNotify") : "";
+
 let status;
 status = (status = $.getval("jkdstatus") || "1") > 1 ? `${status}` : ""; // 账号扩展字符
 let jkdhdArr = [],
