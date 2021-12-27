@@ -28,7 +28,7 @@ const $ = new Env("今日头条极速版");
 const notifyFlag = 1; //0为关闭通知，1为打开通知,默认为1
 const logDebug = 0;
 
-//const notify = $.isNode() ? require('./sendNotify') : '';
+const notify = $.isNode() ? require('./sendNotify') : '';
 let notifyStr = "";
 
 let rndtime = ""; //毫秒
@@ -36,7 +36,6 @@ let httpResult; //global buffer
 
 let host = "i.snssdk.com";
 let hostname = "https://" + host;
-const notify = $.isNode() ? require("./sendNotify") : "";
 
 let userAgent =
     ($.isNode() ? process.env.jrttjsbUA : $.getdata("jrttjsbUA")) ||
@@ -94,7 +93,7 @@ async function showmsg() {
 
     if (notifyFlag == 1) {
         $.msg(notifyBody);
-        //if ($.isNode()){await notify.sendNotify($.name, notifyBody );}
+        if ($.isNode()){await notify.sendNotify($.name, notifyBody );}
     }
 }
 
@@ -392,7 +391,7 @@ async function QueryUserInfo(doTask) {
             console.log(
                 `现金：${result.data.user_income.cash_balance / 100}元`
             );
-            await notify.sendNotify($.name, coin_msg);
+            // await notify.sendNotify($.name, coin_msg);
         } else {
             if (
                 result.data.treasure.next_treasure_time ==
