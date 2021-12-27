@@ -93,7 +93,7 @@ async function showmsg() {
 
     if (notifyFlag == 1) {
         $.msg(notifyBody);
-        if ($.isNode()){await notify.sendNotify($.name, notifyBody );}
+        // if ($.isNode()){await notify.sendNotify($.name, notifyBody );}
     }
 }
 
@@ -391,7 +391,7 @@ async function QueryUserInfo(doTask) {
             console.log(
                 `现金：${result.data.user_income.cash_balance / 100}元`
             );
-            // await notify.sendNotify($.name, coin_msg);
+            await notify.sendNotify($.name, coin_msg);
         } else {
             if (
                 result.data.treasure.next_treasure_time ==
