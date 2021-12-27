@@ -387,7 +387,7 @@ async function QueryUserInfo(doTask) {
         }
         if (doTask == 0) {
             console.log(`\n账户信息：`);
-            var coin_msg = '金币: {result.data.user_income.score_balance}';
+            var coin_msg = `金币: ${result.data.user_income.score_balance}`;
             console.log(coin_msg);
             console.log(
                 `现金：${result.data.user_income.cash_balance / 100}元`
