@@ -9,6 +9,7 @@ export jkdck='{"Cookie":"xz_jkd_appkey=替换的CK"}'
 [task_local]
 1-59/45 9-23/3 * * *  wx_jkd.js, tag=聚看点, enabled=true
 */
+const notify = $.isNode() ? require("./sendNotify") : "";
 
 const $ = new Env("聚看点");
 let status;
@@ -166,6 +167,7 @@ async function qxinfo() {
                     $.log(
                         `usercode: ${result.userinfo.usercode}\n${result.userinfo.infoMeSumCashItem.value} ${result.userinfo.infoMeSumCashItem.title}\n${result.userinfo.infoMeCurCashItem.value} ${result.userinfo.infoMeCurCashItem.title}\n${result.userinfo.infoMeGoldItem.value} ${result.userinfo.infoMeGoldItem.title}`
                     );
+                    await notify.sendNotify($.name, result.userinfo);
 
                 if (result.code != 0) $.log(result.msg);
             } catch (e) {
